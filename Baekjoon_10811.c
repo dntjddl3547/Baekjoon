@@ -10,6 +10,7 @@ int main(void) {
     int num1; // 각 작업의 시작 인덱스
     int num2; // 각 작업의 끝 인덱스
     int i, j; // 반복문에서 사용할 변수
+    int t = 0; // 임시 인덱스 변수
     
     scanf("%d %d", &Basket, &num); // 사용자로부터 바구니의 개수와 작업의 개수를 입력받음
     
@@ -27,8 +28,6 @@ int main(void) {
         if (num1 == num2) { // 시작 인덱스와 끝 인덱스가 같으면 작업을 건너뜀
             continue;
         }
-        
-        int t = 0; // 임시 인덱스 변수
         
         for (j = num1 - 1; j < num2; j++) { // basket 배열에서 num1부터 num2까지의 요소를 temp 배열에 복사
             temp[t] = basket[j];
